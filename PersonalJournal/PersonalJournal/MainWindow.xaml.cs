@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using JournalClassLibrary.NETFramework;
 
 namespace PersonalJournal
 {
@@ -27,7 +28,18 @@ namespace PersonalJournal
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            string username = UsernameBox.Text;
+            string password = PassBox.Text;
+            Login login = new Login();
+            bool validLogin = login.LoginProcess(username, password);
+            if (validLogin == true)
+            {
+                MessageBox.Show("You presented a correct password.");
+            }
+            else
+            {
+                MessageBox.Show("You presented a false password.");
+            }
         }
     }
 }
