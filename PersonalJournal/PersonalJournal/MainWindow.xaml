@@ -1,0 +1,18 @@
+﻿<Window x:Class="PersonalJournal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalJournal"
+        mc:Ignorable="d"
+        Title="Login" Height="250" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="NoWrap"  Text="Weclome to My Personal Journal" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="2" Height="32" Margin="37,0,-46,0" Width="451"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="184,189,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Height="20" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
