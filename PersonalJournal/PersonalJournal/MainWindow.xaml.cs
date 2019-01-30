@@ -40,6 +40,7 @@ namespace PersonalJournal
             {
                 MessageBox.Show("You presented a false password.");
             }
+            
         }
     }
 }

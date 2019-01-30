@@ -16,7 +16,7 @@
         <TextBox x:Name="UsernameBox" HorizontalAlignment="Left" Height="23" Margin="16,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="94,78,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Height="23" Width="104"/>
         <TextBlock HorizontalAlignment="Left" Margin="94,128,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="104" Height="21"/>
-        <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Margin="16.4,128,0,0" VerticalAlignment="Top" Width="120" Height="21"/>
+        <TextBox x:Name="PassBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="16,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" SelectionOpacity="4"/>
 
     </Grid>
 </Window>

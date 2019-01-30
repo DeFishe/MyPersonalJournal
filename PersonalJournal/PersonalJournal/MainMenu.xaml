@@ -7,9 +7,16 @@
         mc:Ignorable="d"
         Title="MainMenu" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="290,18,0,0" TextWrapping="Wrap" Text="MAIN MENU PAGE" VerticalAlignment="Top" Width="227" Height="35" FontFamily="Segoe UI Black" FontSize="24" RenderTransformOrigin="1.564,0.503"/>
-        <Button Content="JOURNAL ENTRY" HorizontalAlignment="Left" Margin="338,58,0,0" VerticalAlignment="Top" Width="126" Height="39" RenderTransformOrigin="0.479,0.405"/>
-        <Button Content="NEW JOURNAL ENTRY" HorizontalAlignment="Left" Margin="336,147,0,0" VerticalAlignment="Top" Width="126" RenderTransformOrigin="2.611,-1.083" Height="39"/>
-        <Button Content="UPDATE PASSWORD" HorizontalAlignment="Left" Margin="336,247,0,0" VerticalAlignment="Top" Width="128" Height="46" Click="Button_Click"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="208,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="162,99,0,0" VerticalAlignment="Top"/>
+        <TabControl HorizontalAlignment="Left" Height="100" Margin="394,125,0,0" VerticalAlignment="Top" Width="100">
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
