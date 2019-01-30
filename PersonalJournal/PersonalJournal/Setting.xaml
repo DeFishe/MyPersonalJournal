@@ -1,0 +1,22 @@
+﻿<Window x:Class="PersonalJournal.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalJournal"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="340,10,0,0" TextWrapping="Wrap" Text="UPDATE PASSWORD" VerticalAlignment="Top" Height="68" Width="144" FontSize="24" FontFamily="Segoe UI Black"/>
+        <TextBox HorizontalAlignment="Left" Height="41" Margin="392,83,0,0" TextWrapping="Wrap" Text="ENTER OLD PASSWORD HERE" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="37" Margin="392,161,0,0" TextWrapping="Wrap" Text="ENTER NEW PASSWORD" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="45" Margin="392,229,0,0" TextWrapping="Wrap" Text="RE-ENTER NEW PASSWORD " VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="272,161,0,0" TextWrapping="Wrap" Text="ENTER NEW PASSWORD" VerticalAlignment="Top" Height="37" Width="115"/>
+        <TextBlock HorizontalAlignment="Left" Margin="277,230,0,0" TextWrapping="Wrap" Text="RE-ENTER NEW PASSWORD" VerticalAlignment="Top" Height="45" Width="115"/>
+        <TextBlock HorizontalAlignment="Left" Margin="269,83,0,0" TextWrapping="Wrap" Text="ENTER OLD PASSWORD " VerticalAlignment="Top" Height="40" Width="118"/>
+
+    </Grid>
+</Window>
