@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:PersonalJournal"
         mc:Ignorable="d"
         Title="NEW_JOURNAL_ENTRY" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="image/blank.jpg" />
+
+    </Window.Background>
+   
+   
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="244,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="287" FontFamily="Segoe UI Black" FontSize="24" Text="NEW JOURNAL ENTRY"/>
         <TextBox HorizontalAlignment="Left" Height="268" Margin="35,89,0,0" TextWrapping="Wrap" Text="ENTER JOURNAL CONTENT HERE " VerticalAlignment="Top" Width="720"/>

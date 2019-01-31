@@ -24,9 +24,37 @@ namespace PersonalJournal
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Update_Password_Button(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        
+
+        private void viewclick(object sender, RoutedEventArgs e)
+        {
+            var viewclick = new JOURNAL_ENTRY();
+            viewclick.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void newclick(object sender, RoutedEventArgs e)
+        {
+            var newclick = new NEW_JOURNAL_ENTRY ();
+            newclick.Show();
+            this.Close();
+        }
+
+        private void passwordclick(object sender, RoutedEventArgs e)
+        {
+            var passwordclick = new Window1();
+            passwordclick.Show();
+            this.Close();
         }
     }
 }
