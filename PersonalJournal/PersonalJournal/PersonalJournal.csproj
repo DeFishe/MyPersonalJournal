@@ -58,8 +58,8 @@
       <DependentUpon>Setting.xaml</DependentUpon>
     </Compile>
     <Page Include="JOURNAL ENTRY.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
@@ -84,12 +84,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NEW JOURNAL ENTRY.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Setting.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

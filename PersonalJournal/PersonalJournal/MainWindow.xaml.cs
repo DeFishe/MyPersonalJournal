@@ -34,7 +34,9 @@ namespace PersonalJournal
             bool validLogin = login.LoginProcess(username, password);
             if (validLogin == true)
             {
-                MessageBox.Show("You presented a correct password.");
+                var mainMenu = new MainMenu();
+                mainMenu.Show();
+                this.Close();
             }
             else
             {

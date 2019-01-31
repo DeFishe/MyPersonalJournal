@@ -24,7 +24,7 @@ namespace PersonalJournal
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Update_Password_Button(object sender, RoutedEventArgs e)
         {
 
         }

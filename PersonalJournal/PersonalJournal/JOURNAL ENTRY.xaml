@@ -8,7 +8,7 @@
         Title="JOURNAL_ENTRY" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="286,24,0,0" TextWrapping="Wrap" Text="JOURNAL ENTRYS" VerticalAlignment="Top" Height="40" Width="220" FontFamily="Segoe UI Black" FontSize="24"/>
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="286,69,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.496,0.468" SelectionChanged="ListBox_SelectionChanged"/>
+        <!--<ListBox HorizontalAlignment="Left" Height="100" Margin="286,69,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.496,0.468" SelectionChanged="ListBox_SelectionChanged"/>-->
 
     </Grid>
 </Window>
