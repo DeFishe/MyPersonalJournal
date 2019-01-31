@@ -1,0 +1,12 @@
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\JournalClassLibrary.NETFramework\bin\Debug\JournalClassLibrary.NETFramework.dll
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\JournalClassLibrary.NETFramework\bin\Debug\JournalClassLibrary.NETFramework.pdb
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.csprojAssemblyReference.cache
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.csproj.CoreCompileInputs.cache
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.dll
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.pdb
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournalV2\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.csprojAssemblyReference.cache
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournalV2\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.csproj.CoreCompileInputs.cache
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournalV2\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.dll
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournalV2\PersonalJournal\JournalClassLibrary.NETFramework\obj\Debug\JournalClassLibrary.NETFramework.pdb
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournalV2\PersonalJournal\JournalClassLibrary.NETFramework\bin\Debug\JournalClassLibrary.NETFramework.dll
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournalV2\PersonalJournal\JournalClassLibrary.NETFramework\bin\Debug\JournalClassLibrary.NETFramework.pdb

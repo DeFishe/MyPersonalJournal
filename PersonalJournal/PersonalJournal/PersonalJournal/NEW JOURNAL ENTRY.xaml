@@ -1,0 +1,16 @@
+﻿<Window x:Class="PersonalJournal.NEW_JOURNAL_ENTRY"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalJournal"
+        mc:Ignorable="d"
+        Title="NEW_JOURNAL_ENTRY" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="244,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="287" FontFamily="Segoe UI Black" FontSize="24" Text="NEW JOURNAL ENTRY"/>
+        <TextBox HorizontalAlignment="Left" Height="268" Margin="35,89,0,0" TextWrapping="Wrap" Text="ENTER JOURNAL CONTENT HERE " VerticalAlignment="Top" Width="720"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="312,55,0,0" TextWrapping="Wrap" Text="ENTER TITLE HERE" VerticalAlignment="Top" Width="126" FontFamily="Segoe UI Black"/>
+        <Button Content="SAVE ENTRY" HorizontalAlignment="Left" Margin="328,362,0,0" VerticalAlignment="Top" Width="75" Height="34"/>
+
+    </Grid>
+</Window>
