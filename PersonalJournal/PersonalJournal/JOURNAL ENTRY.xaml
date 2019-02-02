@@ -13,7 +13,7 @@
                 <DataGridTextColumn Header="Journal Title" Width="300" Binding="{Binding journalTitle}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel x:Name='Stacker' Grid.Row='1' Margin='450,50,0,0' Width='350' Height='300' Background='WhiteSmoke'>
+        <StackPanel x:Name='Stacker' Margin='407,89,35,30' Width='350' Height='300' Background='WhiteSmoke'>
             <TextBlock Text='Journal Title' />
             <TextBlock x:Name='JournalTitleText' />
             <TextBlock Text='Journal Entry' />

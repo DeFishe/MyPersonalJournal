@@ -29,7 +29,9 @@ namespace PersonalJournal
 
         private void JournalEntries_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            viewJournal = (ViewJournal)JournalEntries.SelectedItem;
+            JournalTitleText.Text = viewJournal.journalTitle;
+            JournalEntryText.Text = viewJournal.entry;
         }
     }
 }
