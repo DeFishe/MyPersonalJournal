@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections.Generic;
@@ -12,14 +13,13 @@ namespace JournalClassLibrary.NETFramework
     public static class UserInfo
     {
         public static int userID = 0;
-        public static string userName = " ";
     }
 
     public class Login
     {
         public bool LoginProcess(string username, string password)
         {
-            string usernameQuery = "select count (*) as cnt from USERS where USERNAME=@user and PASSWORD=@password";
+            string usernameQuery = "SELECT USERID FROM USERS where USERNAME=@user and PASSWORD=@password";
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = @"Data Source=(local)\SQLEXPRESS; Initial Catalog =JOURNAL APP; Integrated Security=SSPI";
             SqlCommand sqlCommand = new SqlCommand(usernameQuery, connection);
@@ -27,8 +27,12 @@ namespace JournalClassLibrary.NETFramework
             sqlCommand.Parameters.AddWithValue("@user", username);
             sqlCommand.Parameters.AddWithValue("@password", password);
             connection.Open();
-
-            if (sqlCommand.ExecuteScalar().ToString() == "1")
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                ReadRecord((IDataRecord)reader);
+            }
+            if (UserInfo.userID > 0)
             {
                 connection.Close();
                 return true;
@@ -39,73 +43,94 @@ namespace JournalClassLibrary.NETFramework
                 return false;
             }
         }
+        private static void ReadRecord(IDataRecord record)
+        {
+            UserInfo.userID = Convert.ToInt32(record[0]);
+        }
     }
     public class EditAccount
     {
-        private string newPassword = "";
-
-        public void PasswordUpdate(string newPassword)
+        public EditAccount(string newPasswordInput)
         {
-            string passwordUpdateQuery = $"UPDATE USERS SET PASSWORD = '{newPassword}' WHERE USERID = {UserInfo.userID}";
+            string passwordUpdateQuery = $"UPDATE USERS SET PASSWORD = @password WHERE USERID = @userID";
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = @"Data Source=(local)\SQLEXPRESS; Initial Catalog =JOURNAL APP; Integrated Security=SSPI";
             SqlCommand sqlCommand = new SqlCommand(passwordUpdateQuery, connection);
+            sqlCommand.Parameters.Clear();
+            sqlCommand.Parameters.AddWithValue("@password", newPasswordInput);
+            sqlCommand.Parameters.AddWithValue("@userID", UserInfo.userID);
             connection.Open();
             sqlCommand.ExecuteNonQuery();
             connection.Close();
         }
     }
-    public class JournalList
-    {
-        public void GetTitlePreview(int userID, IEnumerable listbox)
-        {
-            string titlePreviewQuery = $"SELECT * FROM JOURNALS WHERE USERID = {UserInfo.userID}";
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source = (local)\SQLEXPRESS; Initial Catalog =JOURNAL APP; Integrated Security=SSPI";
-            SqlCommand sqlCommand = new SqlCommand(titlePreviewQuery, connection);
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            connection.Open();
-            while (sqlDataReader.Read())
-            {
-                listbox.Items.Add(sqlDataReader["JOURNALTITLE"]);
-            }
-        }
-    }
+    //public class JournalList
+    //{
+    //    public string GetTitlePreview()
+    //    {
+    //        string titlePreviewQuery = $"SELECT * FROM JOURNALS WHERE USERID = {UserInfo.userID}";
+    //        SqlConnection connection = new SqlConnection();
+    //        connection.ConnectionString = @"Data Source = (local)\SQLEXPRESS; Initial Catalog =JOURNAL APP; Integrated Security=SSPI";
+    //        SqlCommand sqlCommand = new SqlCommand(titlePreviewQuery, connection);
+    //        sqlCommand.Parameters.Clear();
+    //        sqlCommand.Parameters.AddWithValue("@userID", UserInfo.userID);
+    //        connection.Open();
+    //        SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+    //        while (sqlDataReader.Read())
+    //        {
+    //            return Convert.ToString(sqlDataReader["JOURNALTITLE"]);
+    //        }
+    //        connection.Close();
+    //        return null;
+    //    }
+    //}
     public class ViewJournal
     {
-        int entryIDGlobal;
-        public ViewJournal(int entryID)
+        public int entryID { get; set; }
+        public string journalTitle { get; set; }
+        public string entry { get; set; }
+        public List<ViewJournal> GetJournal()
         {
-            entryIDGlobal = entryID;
-        }
 
-        public string GetJournalBody(int entryID)
-        {
-            string journalBody = " ";
-            string getJournalBodyQuery = $"SELECT JOURNAL JOURNALENTRY FROM JOURNALS WHERE ENTRYID = {entryIDGlobal}";
+            List<ViewJournal> list = new List<ViewJournal>();
+
+            string viewJournalQuery = $"SELECT ENTRYID, JOURNALTITLE, JOURNALENRTY FROM JOURNALS WHERE USERID = '{UserInfo.userID}';";
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = @"Data Source = (local)\SQLEXPRESS; Initial Catalog =JOURNALAPP; Integrated Security=SSPI";
-            SqlCommand command = new SqlCommand(getJournalBodyQuery, connection);
+            connection.ConnectionString = @"Data Source=(local)\SQLEXPRESS; Initial Catalog =JOURNAL APP; Integrated Security=SSPI";
+            SqlCommand command = new SqlCommand(viewJournalQuery, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
-            journalBody = reader.ToString();
+            while (reader.Read())
+            {
+                list.Add(new ViewJournal { entryID = reader.GetInt32(0), journalTitle = reader.GetString(1), entry = reader.GetString(2) });
+            }
             connection.Close();
-            return journalBody;
+            return list;
         }
     }
     public class SaveJournal
     {
-        string title = " ";
-        string body = " ";
+        private string title = " ";
+        private string body = " ";
 
         public SaveJournal(string inputTitle, string inputBody)
         {
             title = inputTitle;
             body = inputBody;
         }
-        public void UploadJournal(string title, string body)
+        public void UploadJournal()
         {
-            string jounrnalEntryQuery = @"INSERT INTO JOURNAL (
+            string journalEntryQuery = @"INSERT INTO JOURNALS (USERID, JOURNALTITLE, JOURNALENRTY) VALUES (@userID, @title, @body)";
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = @"Data Source=(local)\SQLEXPRESS; Initial Catalog =JOURNAL APP; Integrated Security=SSPI";
+            SqlCommand command = new SqlCommand(journalEntryQuery, connection);
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@title", title);
+            command.Parameters.AddWithValue("@body", body);
+            command.Parameters.AddWithValue("@userID", UserInfo.userID);
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
         }
     }
 }

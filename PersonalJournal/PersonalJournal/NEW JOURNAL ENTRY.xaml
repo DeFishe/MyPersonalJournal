@@ -8,9 +8,9 @@
         Title="NEW_JOURNAL_ENTRY" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="244,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="287" FontFamily="Segoe UI Black" FontSize="24" Text="NEW JOURNAL ENTRY"/>
-        <TextBox HorizontalAlignment="Left" Height="268" Margin="35,89,0,0" TextWrapping="Wrap" Text="ENTER JOURNAL CONTENT HERE " VerticalAlignment="Top" Width="720"/>
-        <TextBox HorizontalAlignment="Left" Height="29" Margin="312,55,0,0" TextWrapping="Wrap" Text="ENTER TITLE HERE" VerticalAlignment="Top" Width="126" FontFamily="Segoe UI Black"/>
-        <Button Content="SAVE ENTRY" HorizontalAlignment="Left" Margin="328,362,0,0" VerticalAlignment="Top" Width="75" Height="34"/>
+        <TextBox x:Name="BodyBox" Height="268" Margin="35,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="720"/>
+        <TextBox x:Name="TitleBox" HorizontalAlignment="Left" Height="29" Margin="312,55,0,0" TextWrapping="Wrap" Text="ENTER TITLE HERE" VerticalAlignment="Top" Width="126" FontFamily="Segoe UI Black"/>
+        <Button Content="SAVE ENTRY" HorizontalAlignment="Left" Margin="328,362,0,0" VerticalAlignment="Top" Width="75" Height="34" Click="Save_Entry"/>
 
     </Grid>
 </Window>

@@ -68,3 +68,11 @@ C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJou
 C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\PersonalJournal\obj\Debug\PersonalJournal.csproj.CopyComplete
 C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\PersonalJournal\obj\Debug\PersonalJournal.exe
 C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\PersonalJournal\obj\Debug\PersonalJournal.pdb
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\JOURNAL ENTRY.g.cs
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\MainMenu.g.cs
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\NEW JOURNAL ENTRY.g.cs
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\Setting.g.cs
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\JOURNAL ENTRY.baml
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\MainMenu.baml
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\NEW JOURNAL ENTRY.baml
+C:\Users\svita\OneDrive - Embry-Riddle Aeronautical University\repos\PersonalJournal\PersonalJournal\obj\Debug\Setting.baml

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using JournalClassLibrary.NETFramework;
 
 namespace PersonalJournal
 {
@@ -24,9 +25,24 @@ namespace PersonalJournal
             InitializeComponent();
         }
 
-        private void Update_Password_Button(object sender, RoutedEventArgs e)
+        private void Update_Password_Click(object sender, RoutedEventArgs e)
         {
+            var settings = new Window1();
+            settings.Show();
+            this.Close();
+        }
 
+        private void New_Journal_Entry_Click(object sender, RoutedEventArgs e)
+        {
+            var newJournalEntry = new NEW_JOURNAL_ENTRY();
+            newJournalEntry.Show();
+            this.Close();
+        }
+        private void View_Journal_Click(object sender, RoutedEventArgs e)
+        {
+            var viewJournalEntry = new JOURNAL_ENTRY();
+            viewJournalEntry.Show();
+            this.Close();
         }
     }
 }
