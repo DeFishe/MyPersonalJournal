@@ -31,11 +31,12 @@ namespace PersonalJournal
             string username = UsernameBox.Text;
             string password = PassBox.Text;
             Login login = new Login();
-            bool validLogin = login.LoginProcess(username, password);
+            bool validLogin =login.LoginProcess(username, password);
             if (validLogin == true)
             {
                 var mainMenu = new MainMenu();
                 mainMenu.Show();
+                MessageBox.Show($"Welcome User {UserInfo.userID}");
                 this.Close();
             }
             else

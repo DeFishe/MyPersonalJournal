@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using JournalClassLibrary.NETFramework;
 
 namespace PersonalJournal
 {
@@ -19,9 +20,16 @@ namespace PersonalJournal
     /// </summary>
     public partial class JOURNAL_ENTRY : Window
     {
+        ViewJournal viewJournal = new ViewJournal();
         public JOURNAL_ENTRY()
         {
             InitializeComponent();
+            JournalEntries.ItemsSource = viewJournal.GetJournal();
+        }
+
+        private void JournalEntries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

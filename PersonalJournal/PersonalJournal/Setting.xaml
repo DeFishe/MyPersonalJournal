@@ -11,12 +11,13 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="340,10,0,0" TextWrapping="Wrap" Text="UPDATE PASSWORD" VerticalAlignment="Top" Height="68" Width="144" FontSize="24" FontFamily="Segoe UI Black"/>
-        <TextBox HorizontalAlignment="Left" Height="41" Margin="392,83,0,0" TextWrapping="Wrap" Text="ENTER OLD PASSWORD HERE" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Height="37" Margin="392,161,0,0" TextWrapping="Wrap" Text="ENTER NEW PASSWORD" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="45" Margin="392,229,0,0" TextWrapping="Wrap" Text="RE-ENTER NEW PASSWORD " VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="41" Margin="392,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="newPasswordBox" HorizontalAlignment="Left" Height="37" Margin="392,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="45" Margin="392,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="272,161,0,0" TextWrapping="Wrap" Text="ENTER NEW PASSWORD" VerticalAlignment="Top" Height="37" Width="115"/>
         <TextBlock HorizontalAlignment="Left" Margin="277,230,0,0" TextWrapping="Wrap" Text="RE-ENTER NEW PASSWORD" VerticalAlignment="Top" Height="45" Width="115"/>
         <TextBlock HorizontalAlignment="Left" Margin="269,83,0,0" TextWrapping="Wrap" Text="ENTER OLD PASSWORD " VerticalAlignment="Top" Height="40" Width="118"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="392,315,0,0" VerticalAlignment="Top" Width="120" Height="45" Click="SubmitClick"/>
 
     </Grid>
 </Window>
